@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Career Path Simulator</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+        textarea, input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        pre {
+            background: white;
+            padding: 15px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="main-heading">AI Career Path Simulator</h2>
+
+    <form method="post" class="login-form">
+        <label>Skills:</label>
+        <textarea name="skills" required></textarea>
+
+        <label>Interests:</label>
+        <textarea name="interest" required></textarea>
+
+        <label>Career Goal:</label>
+        <input type="text" name="goal" required />
+
+        <button type="submit">Get Career Path</button>
+    </form>
+
+    {% if result %}
+        <h3>📊 Career Simulation Result</h3>
+        <pre>{{ result }}</pre>
+    {% endif %}
+
+    <style>
+        .main-heading {
+            text-align: center;
+            color: #2d7ff9;
+            font-weight: 800;
+            letter-spacing: 2px;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 8px #b6c6e0;
+        }
+        .login-form {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px #0002;
+            padding: 32px 32px 24px 32px;
+            max-width: 420px;
+            margin: 40px auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            border: 1px solid #e3e7ef;
+        }
+        .login-form label {
+            font-weight: 700;
+            color: #2d3a4b;
+            margin-bottom: 4px;
+        }
+        .login-form textarea,
+        .login-form input[type="text"] {
+            border-radius: 8px;
+            border: 1px solid #cfd8dc;
+            padding: 12px;
+            font-size: 1em;
+            background: #f7faff;
+            transition: border 0.2s;
+        }
+        .login-form textarea:focus,
+        .login-form input[type="text"]:focus {
+            border: 1.5px solid #2d7ff9;
+            outline: none;
+            background: #fff;
+        }
+        .login-form button {
+            background: linear-gradient(90deg, #2d7ff9 60%, #2563eb 100%);
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #fff;
+            border: none;
+            padding: 14px 0;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px #2d7ff933;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .login-form button:hover {
+            background: linear-gradient(90deg, #2563eb 60%, #2d7ff9 100%);
+            box-shadow: 0 4px 16px #2d7ff944;
+        }
+    </style>
+
+</body>
+</html>
